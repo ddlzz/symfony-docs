@@ -1,32 +1,28 @@
-Our Backward Compatibility Promise
+Политика обеспечения обратной совместимости
 ==================================
 
-Ensuring smooth upgrades of your projects is our first priority. That's why
-we promise you backward compatibility (BC) for all minor Symfony releases.
-You probably recognize this strategy as `Semantic Versioning`_. In short,
-Semantic Versioning means that only major releases (such as 2.0, 3.0 etc.) are
-allowed to break backward compatibility. Minor releases (such as 2.5, 2.6 etc.)
-may introduce new features, but must do so without breaking the existing API of
-that release branch (2.x in the previous example).
+Безболезненные обновления версий приложения для нас очень важны, поэтому мы обещаем сохранять обратную совместимость во всех минорных релизах.
+Вы знаете эту стратегию под названием `Semantic Versioning`_. Вкратце это означает, что только мажорные релизы (такие как 2.0, 3.0 etc.) могут ломать обратную совместимость. Минорные релизы (такие как 2.5, 2.6 etc.)
+могут вводить новые фичи, но должны делать это без нарушения работы текущей мажорной релизной версии (2.x в предыдущем примере).
 
-.. caution::
+.. осторожно::
 
-    This promise was introduced with Symfony 2.3 and does not apply to previous
-    versions of Symfony.
+    Эта политика была введена в Symfony версии 2.3 и не относится к предыдущим версиям фреймворка.
 
-However, backward compatibility comes in many different flavors. In fact, almost
-every change that we make to the framework can potentially break an application.
-For example, if we add a new method to a class, this will break an application
-which extended this class and added the same method, but with a different
-method signature.
+Тем не менее обеспечение обратной совместимости может достигнуто разными способами. На самом деле практически каждое изменение в коде фреймворка может ее поломать.
+Например, если мы добавим новый метод в класс, это может сломать работу приложения, которое наследует этот класс и добавляет метод с таким же названием, но другой сигнатурой
 
 Also, not every BC break has the same impact on application code. While some BC
 breaks require you to make significant changes to your classes or your
 architecture, others are fixed by changing the name of a method.
 
+Также не каждое нарушение обратной совместимости влияет на работу приложения одинаково плохо. Некоторые нарушения могут потребовать значительных изменений кодовой базы в то время, как другие можно исправить переименованием имен метода.
+
 That's why we created this page for you. The section "Using Symfony Code" will
 tell you how you can ensure that your application won't break completely when
 upgrading to a newer version of the same major release branch.
+
+Поэтому мы написали эту статью. Секция "Использование кода Symfony" расскажет вам, как обезопасить себя от проблем в работе приложения при обновлении на новую минорную версию фреймворка.
 
 The second section, "Working on Symfony Code", is targeted at Symfony
 contributors. This section lists detailed rules that every contributor needs to
