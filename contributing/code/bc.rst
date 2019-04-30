@@ -5,37 +5,28 @@
 Вы знаете эту стратегию под названием `Semantic Versioning`_. Вкратце это означает, что только мажорные релизы (такие как 2.0, 3.0 etc.) могут ломать обратную совместимость. Минорные релизы (такие как 2.5, 2.6 etc.)
 могут вводить новые фичи, но должны делать это без нарушения работы текущей мажорной релизной версии (2.x в предыдущем примере).
 
-.. осторожно::
+.. warning::
 
     Эта политика была введена в Symfony версии 2.3 и не относится к предыдущим версиям фреймворка.
 
 Тем не менее обеспечение обратной совместимости может достигнуто разными способами. На самом деле практически каждое изменение в коде фреймворка может ее поломать.
 Например, если мы добавим новый метод в класс, это может сломать работу приложения, которое наследует этот класс и добавляет метод с таким же названием, но другой сигнатурой
 
-Also, not every BC break has the same impact on application code. While some BC
-breaks require you to make significant changes to your classes or your
-architecture, others are fixed by changing the name of a method.
-
 Также не каждое нарушение обратной совместимости влияет на работу приложения одинаково плохо. Некоторые нарушения могут потребовать значительных изменений кодовой базы в то время, как другие можно исправить переименованием имен метода.
-
-That's why we created this page for you. The section "Using Symfony Code" will
-tell you how you can ensure that your application won't break completely when
-upgrading to a newer version of the same major release branch.
 
 Поэтому мы написали эту статью. Секция "Использование кода Symfony" расскажет вам, как обезопасить себя от проблем в работе приложения при обновлении на новую минорную версию фреймворка.
 
-The second section, "Working on Symfony Code", is targeted at Symfony
-contributors. This section lists detailed rules that every contributor needs to
-follow to ensure smooth upgrades for our users.
+Вторая часть "работа над кодом Symfony" написана для контрибьюторов. В ней мы детально описываем
+правила, которым должен следовать контрибьютор, чтобы обеспечить беспроблемные обновления для пользователей.
 
 .. warning::
 
-    :doc:`Experimental Features </contributing/code/experimental>` and code
-    marked with the ``@internal`` tags are excluded from our Backward
-    Compatibility promise.
+    :doc:`На экспериментальные </contributing/code/experimental>` фичи 
+    и код, помеченный как ``@internal`` не распространяется политика обеспечения 
+    обратной совместимости.
 
-    Also note that backward compatibility breaks are tolerated if they are
-    required to fix a security issue.
+    Также просим обратить внимание, что поломки обратной совместимости возможны в случае,
+    если они требуются для исправления проблем с безопасностью.
 
 Using Symfony Code
 ------------------
